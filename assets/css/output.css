@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -470,4 +470,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hidden {
   display: none;
+}
+
+.font-fredoka {
+  font-family: Fredoka One, cursive;
+}
+
+.text-msred {
+  --tw-text-opacity: 1;
+  color: rgb(227 77 112 / var(--tw-text-opacity));
 }
