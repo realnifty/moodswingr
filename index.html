@@ -10,11 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
     <title>moodswingr</title>
 </head>
-<body>
+<body class="bg-gradient-to-r from-msblue to-msred">
     <!-- title with icon on the right-->
-    <header>
-        <h1 id="title">moodswingr</h1>
-        <img id="icon1" src="./assets/images/headphones-icon.png"/>
+    <header class="w-full flex flex-row justify-around align-center">
+        <div class="logo flex drop-shadow-xl">
+            <h1 id="title" class="font-fredoka text-mslight text-7xl mx-4 my-8">moodswingr</h1>
+            <img id="icon1" class="h-24 w-24 my-8" src="./assets/images/headphones-icon.png"/>
+        </div>
     </header>
     <main>
         <!--about button top of main section-->
@@ -35,14 +37,14 @@
         <!-- playlist widget inside the div to the right.-->
         <div></div>
     </main>
-    <footer>
+    <footer class="fixed bottom-0 drop-shadow-xl w-full flex flex-row items-center justify-around">
         <!-- footer section with icon to the left, copyright centerd and div with three icons on the right-->
-        <img id="icon2" src="./assets/images/headphones-icon.png"/>
-        <h6>&copy 2022 moodswinger</h6>
-        <div id="icon-group">
-            <img id="icon3" src="./assets/images/github-icon.png"/>
-            <img id="icon4" src="./assets/images/github-icon.png"/>
-            <img id="icon5" src="./assets/images/github-icon.png"/>
+        <img id="icon2" class="h-24 w-24 my-6" src="./assets/images/headphones-icon.png"/>
+        <h6 class="font-sawagoth text-mslight text-xl">&copy 2022 moodswingr</h6>
+        <div id="icon-group" class="drop-shadow-xl flex flex-row justify-center align-center">
+            <img id="icon3" class="h-14 w-14 m-2" src="./assets/images/github-icon.png"/>
+            <img id="icon4" class="h-14 w-14 m-2" src="./assets/images/github-icon.png"/>
+            <img id="icon5" class="h-14 w-14 m-2" src="./assets/images/github-icon.png"/>
         </div>
     </footer>
     <script href="assets/js/script.js"></script>
