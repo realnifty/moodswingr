@@ -8,6 +8,9 @@ module.exports = {
       'mslight': '#eef5ff',
     },
     extend: {
+      spacing: {
+        '928':'58rem',
+      },
       fontFamily: {
         'fredoka': ['Fredoka One', 'cursive'],
         'sawagoth': ['Sawarabi Gothic', 'sans-serif']
