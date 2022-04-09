@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
     <title>moodswingr</title>
 </head>
-<body class="bg-gradient-to-r from-msblue to-msred">
+<body class="bg-gradient-to-r from-msblue to-msred h-screen">
     <!-- title with icon on the right-->
     <header class="w-full flex flex-row justify-around align-center">
         <div class="logo flex drop-shadow-xl">
@@ -21,19 +21,21 @@
     <div class="mt-10" id="info">
         <!--about button top of main section-->
         <button id="modal-btn" class="font-fredoka text-mslight text-3xl bg-msblue rounded-3xl flex mx-auto h-11 w-44 items-center justify-center hover:shadow-lg hover:shadow-mslight hover:bg-msred">about</button>
-        <div class="modal-container flex align-center justify-center">
-            <div class="modal text-mslight rounded-3xl bg-msred w-96 h-64">
-                <div class="modal-header flex justify-between align-center ml-24 m-3">
-                    <h3 class="font-fredoka text-3xl">moodswingr</h3>
-                    <img id="modal-exit" class="w-5 h-5 self-center cursor-pointer mr-3 hover:transition ease-in-out hover:scale-125" src="./assets/images/x.svg"></img>
-                </div>
-                <div class="modal-text font-sawagoth text-center text-lg m-8 mt-5">
-                    <p>moodswingr recommends songs based on your current mood. Select a mood from the mood menu to get music recommendations that best compliment how you're feeling!</p>
+        <div class="h-screen z-10 absolute inset-0 bg-msdark backdrop-blur-sm bg-opacity-50 m-auto flex align-center justify-center">
+            <div class="modal-container m-auto flex align-center justify-center">
+                <div class="modal text-mslight rounded-3xl bg-msred w-96 h-64">
+                    <div class="modal-header flex justify-between align-center ml-24 m-3">
+                        <h3 class="font-fredoka text-3xl">moodswingr</h3>
+                        <img id="modal-exit" class="w-5 h-5 self-center cursor-pointer mr-3 hover:transition ease-in-out hover:scale-125" src="./assets/images/x.svg"></img>
+                    </div>
+                    <div class="modal-text font-sawagoth text-center text-lg m-8 mt-5">
+                        <p>moodswingr recommends songs based on your current mood. Select a mood from the mood menu to get music recommendations that best compliment how you're feeling!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <main class="">
+    <main>
         <!--image with mood selector on top use z-index in css to accomplish this-->
         <div class="hero-container w-3/4 mt-24 mx-auto flex justify-evenly self-center align-center">
             <div class="hero-img">
@@ -52,26 +54,27 @@
         </div>
         <!-- select mood-->
         <select class="" name="mood">
-            <option value="" disabled selected hidden>How are you feeling?</option>
+            <option value="" disabled selected hidden>Select your mood</option>
             <option value="sad">Sad</option>
             <option value="angry">Angry</option>
             <option value="bored">Bored</option>
             <option value="happy">Happy</option>
-            <option value="anxious">Ansxious</option>
+            <option value="anxious">Anxious</option>
             <option value="pensive">Pensive</option>
             <option value="loving">Loving</option>
         </select>
     </main>
-    <footer class="fixed bottom-0 drop-shadow-xl w-full flex flex-row items-center justify-around">
-        <!-- footer section with icon to the left, copyright centerd and div with three icons on the right-->
-        <img id="icon2" class="h-24 w-24 my-6 fill-mslight" src="./assets/images/headphones-icon.svg"/>
-        <h6 class="font-sawagoth text-mslight text-xl">&copy 2022 moodswingr</h6>
-        <div id="icon-group" class="drop-shadow-xl flex flex-row justify-center align-center">
-            <a href="https://github.com/realnifty"><img id="icon3"  class="h-14 w-14 m-2" src="./assets/images/github-icon.svg"/></a>
-            <a href="https://github.com/Itzamary"><img id="icon4"  class="h-14 w-14 m-2" src="./assets/images/github-icon.svg"/></a>
-            <a href="https://github.com/axdot"><img id="icon5"  class="h-14 w-14 m-2" src="./assets/images/github-icon.svg"/></a>
+    <footer class="fixed bottom-0 w-screen">
+        <div class="footer-elements drop-shadow-xl flex items-center justify-around">
+            <img id="icon2" class="h-24 w-24 my-6" src="./assets/images/headphones-icon.svg"/>
+            <h6 class="font-sawagoth text-mslight text-xl">&copy 2022 moodswingr</h6>
+            <div id="icon-group" class="drop-shadow-xl flex flex-row justify-center align-center">
+                <a href="https://github.com/realnifty"><img id="icon3"  class="h-14 w-14 m-2" src="./assets/images/github-icon.svg"/></a>
+                <a href="https://github.com/Itzamary"><img id="icon4"  class="h-14 w-14 m-2" src="./assets/images/github-icon.svg"/></a>
+                <a href="https://github.com/axdot"><img id="icon5"  class="h-14 w-14 m-2" src="./assets/images/github-icon.svg"/></a>
+            </div>
         </div>
     </footer>
-    <script href="assets/js/script.js"></script>
+    <script href="./assets/js/script.js"></script>
 </body>
 </html>
