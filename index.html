@@ -21,12 +21,12 @@
     <div class="mt-10" id="info">
         <!--about button top of main section-->
         <button id="modal-btn" class="font-fredoka text-mslight text-3xl bg-msblue rounded-3xl flex mx-auto h-11 w-44 items-center justify-center hover:shadow-lg hover:shadow-mslight hover:bg-msred">about</button>
-        <div class="h-screen z-10 absolute inset-0 bg-msdark backdrop-blur-sm bg-opacity-50 m-auto flex align-center justify-center">
-            <div class="modal-container m-auto flex align-center justify-center">
-                <div class="modal text-mslight rounded-3xl bg-msred w-96 h-64">
+        <div id="overlay" class="h-screen z-10 absolute hidden inset-0 bg-msdark backdrop-blur-sm bg-opacity-50 m-auto flex align-center justify-center">
+            <div class="m-auto flex align-center justify-center">
+                <div id="modal" class="text-mslight rounded-3xl bg-msred w-96 h-64">
                     <div class="modal-header flex justify-between align-center ml-24 m-3">
                         <h3 class="font-fredoka text-3xl">moodswingr</h3>
-                        <img id="modal-exit" class="w-5 h-5 self-center cursor-pointer mr-3 hover:transition ease-in-out hover:scale-125" src="./assets/images/x.svg"></img>
+                        <img id="modal-close" class="w-5 h-5 self-center cursor-pointer mr-3 hover:transition ease-in-out hover:scale-125" src="./assets/images/x.svg"></img>
                     </div>
                     <div class="modal-text font-sawagoth text-center text-lg m-8 mt-5">
                         <p>moodswingr recommends songs based on your current mood. Select a mood from the mood menu to get music recommendations that best compliment how you're feeling!</p>
@@ -75,6 +75,6 @@
             </div>
         </div>
     </footer>
-    <script href="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
