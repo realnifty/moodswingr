@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <main>
+    <main class="relative">
         <!--image with mood selector on top use z-index in css to accomplish this-->
         <div class="hero-container w-3/4 mt-24 mx-auto flex justify-evenly self-center align-center">
             <div class="hero-img">
@@ -53,16 +53,18 @@
             </div>
         </div>
         <!-- select mood-->
-        <select class="mood" name="mood">
-            <option value="" disabled selected hidden>Select your mood</option>
-            <option value="sad">Sad</option>
-            <option value="angry">Angry</option>
-            <option value="bored">Bored</option>
-            <option value="happy">Happy</option>
-            <option value="anxious">Anxious</option>
-            <option value="pensive">Pensive</option>
-            <option value="loving">Loving</option>
-        </select>
+        <div class="absolute inset-0 left-50">
+            <select  name="mood ">
+                <option value="" disabled selected hidden>Select your mood</option>
+                <option class="options" value="sad">Sad</option>
+                <option class="options" value="angry">Angry</option>
+                <option class="options" value="bored">Bored</option>
+                <option class="options" value="happy">Happy</option>
+                <option class="options" value="anxious">Anxious</option>
+                <option class="options" value="pensive">Pensive</option>
+                <option class="options" value="loving">Loving</option>
+            </select>
+        </div>
     </main>
     <footer class="bottom-0 w-screen">
         <div class="footer-elements drop-shadow-xl flex items-center justify-around">
