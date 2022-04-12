@@ -43,7 +43,7 @@
             </div>
             <div class="playlist bg-msblue w-72 h-96 rounded-3xl">
                 <div class="playlist-header text-xl font-fredoka text-mslight text-center">
-                    <p class="mx-auto my-4">Hello!</p>
+                    <p class="mx-auto my-4" id="playlist-name">Select a mood!</p>
                 </div>
                 <div id="song-recs">
                     <ul id="song-list" class="font-sawagoth text-sm text-center text-mslight">
@@ -54,14 +54,12 @@
         </div>
         <!-- select mood-->
         <div class="absolute inset-0 left-50">
-            <select  name="mood ">
+            <select class="mood" name="mood">
                 <option value="" disabled selected hidden>Select your mood</option>
                 <option class="options" value="sad">Sad</option>
                 <option class="options" value="angry">Angry</option>
-                <option class="options" value="bored">Bored</option>
                 <option class="options" value="happy">Happy</option>
                 <option class="options" value="anxious">Anxious</option>
-                <option class="options" value="pensive">Pensive</option>
                 <option class="options" value="loving">Loving</option>
             </select>
         </div>

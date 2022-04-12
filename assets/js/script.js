@@ -1,5 +1,6 @@
 // globla vairables
-var mood = document.querySelector(`.mood`)
+var mood = document.querySelector(`.mood`);
+var playlist = document.querySelector(`#playlist-name`);
 // modal functionality
 window.addEventListener(`DOMContentLoaded`, () => {
     let aboutBtn = document.querySelector(`#modal-btn`);
@@ -14,32 +15,78 @@ window.addEventListener(`DOMContentLoaded`, () => {
     });
 });
 
+var getPlaylist = function (playlistId) {
+    var options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
+            'X-RapidAPI-Key': 'f7955a52bcmsh7aeefb259dd6fc4p100f96jsnbff71a98476a'
+        }
+    };
+
+
+    
+    fetch(`https://spotify23.p.rapidapi.com/playlist/?id=${playlistId}`, options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+}
+
+var getPlaylistTracks = function() {
+    var options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
+            'X-RapidAPI-Key': 'f7955a52bcmsh7aeefb259dd6fc4p100f96jsnbff71a98476a'
+        }
+    };
+    
+    fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=1v1xk7kQiZUfKrGVRqcNoa&offset=0&limit=10', options)
+        .then(function (response) {
+            response.json()
+            
+        })
+        .then(function(response) {
+            for(var i = 0; i < response[i].length; i++){
+                console.log(response.items[0].name);
+            }
+            console.log(response);
+        })
+        .catch(err => console.error(err));
+}
 
 // add functionality to mood dropdown
 var selectMood = function(event){
     event.preventDefault();
     console.log(event);
-    console.log(event.target.value)
-    console.log(`this is my mood`)
+    console.log(event.target.value);
+    console.log(`this is my mood`);
     var moodNow = (event.target.value);
 
+    var sadId = `6nxPNnmSE0d5WlplUsa5L3`;
+    var happyId = `0RH319xCjeU8VyTSqCF6M4`;
+    var anxiousId = `4GVUmPNSyt9tPdUQXuSiQs`;
+    var lovingId = `37i9dQZF1DX7rOY2tZUw1k`;
+    var angryId = `37i9dQZF1DWTvNyxOwkztu`;
+
     if (moodNow === `sad`){
-        console.log(`im sad right now`)
+        getPlaylist(sadId);
+        console.log(`im sad right now`);
     } else if (moodNow === `angry`) {
-        console.log(`im angry right now`)
-    } else if (moodNow === `bored`) {
-        console.log(`im bored right now`)
+        getPlaylist(angryId);
+        console.log(`im angry right now`);
     } else if (moodNow === `happy`) {
-        console.log(`im happy right now`)
+        getPlaylist(happyId);
+        console.log(`im happy right now`);
     } else if (moodNow === `anxious`) {
-        console.log(`im anxious right now`)
-    } else if (moodNow === `pensive`) {
-        console.log(`im pensive right now`)
+        getPlaylist(anxiousId);
+        console.log(`im anxious right now`);
     } else if (moodNow === `loving`) {
-        console.log(`im loving right now`)
+        getPlaylist(lovingId);
+        console.log(`im loving right now`);
     }
     
 };
 
 mood.addEventListener('change',selectMood)
-
+getPlaylistTracks();
