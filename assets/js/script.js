@@ -29,9 +29,26 @@ var getPlaylistTracks = function(trackId) {
             response.json()
             .then(function (response){
                 console.log(response)
+
+                let ulList = document.querySelector('#song-list');
+
                 for (let i = 0; i < response.items.length; i++){
                     console.log(response.items[i].track.name);
+                    let li = document.createElement("li");
+
+                    let anchor= document.createElement('a');
+                    anchor.text = response.items[i].track.name;
+
+                    
+                    anchor.style.textDecoration = 'none';
+                    anchor.href = 'https://www.youtube.com/results?search_query=' + response.items[i].track.name;
+                    anchor.setAttribute('target', '_blank');
+                    li.appendChild(anchor);
+                    
+                    
+                    ulList.appendChild(li);
                 }
+
             })
         })
         
