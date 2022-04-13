@@ -20,23 +20,25 @@ var getPlaylistTracks = function(trackId) {
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
-            'X-RapidAPI-Key': '86673a3a0fmshb2bb63a74b94633p101ce8jsn70748f432c0e'
+            'X-RapidAPI-Key': 'f7955a52bcmsh7aeefb259dd6fc4p100f96jsnbff71a98476a'
         }
     };
     
-    fetch(`https://spotify23.p.rapidapi.com/playlist_tracks/?id=${trackId}&offset=0&limit=10`, options)
+    fetch(`https://spotify23.p.rapidapi.com/playlist_tracks/?id=${trackId}&offset=0`, options)
         .then(function (response){
             response.json()
             .then(function (response){
                 console.log(response)
 
-                let ulList = document.querySelector('#song-list');
+                let ulList = document.querySelector(`#song-list`);
+                let playlistHeader = document.querySelector(`#playlist-header`);
                 // loop that creates a list of track names that user can click on access a youtube search of the song 
                 for (let i = 0; i < response.items.length; i++){
-                    console.log(response.items[i].track.name);
-                    let li = document.createElement("li");
-                    let anchor= document.createElement('a');
-                    anchor.text = response.items[i].track.name;
+                    let li = document.createElement(`li`);
+                    li.classList.add(`hover:underline`, `p-2`);
+                    let anchor= document.createElement(`a`);
+                    playlistHeader.innerText = "We recommend these songs!";
+                    anchor.text =response.items[i].track.artists[0].name + " - " + response.items[i].track.name;
                     anchor.style.textDecoration = 'none';
                     anchor.href = 'https://www.youtube.com/results?search_query=' + response.items[i].track.name;
                     anchor.setAttribute('target', '_blank');

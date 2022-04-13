@@ -20,7 +20,7 @@
     </header>
     <div class="mt-10" id="info">
         <!--about button top of main section-->
-        <button id="modal-btn" class="font-fredoka text-mslight text-3xl bg-msblue rounded-3xl flex mx-auto h-11 w-44 items-center justify-center hover:shadow-lg hover:shadow-mslight hover:bg-msred">about</button>
+        <button id="modal-btn" class="font-sawagoth text-mslight text-2xl bg-msblue rounded-3xl flex mx-auto h-11 w-44 items-center justify-center hover:shadow-lg hover:shadow-mslight hover:bg-blue-500">about</button>
         <div id="overlay" class="h-screen z-10 absolute hidden inset-0 bg-msdark backdrop-blur-sm bg-opacity-50 m-auto flex align-center justify-center">
             <div class="m-auto flex align-center justify-center">
                 <div id="modal" class="text-mslight rounded-3xl bg-msred w-96 h-64">
@@ -29,39 +29,38 @@
                         <img id="modal-close" class="w-5 h-5 self-center cursor-pointer mr-3 hover:transition ease-in-out hover:scale-125" src="./assets/images/x.svg"></img>
                     </div>
                     <div class="modal-text font-sawagoth text-center text-lg m-8 mt-5">
-                        <p>moodswingr recommends songs based on your current mood. Select a mood from the mood menu to get music recommendations that best compliment how you're feeling!</p>
+                        <p>moodswingr recommends songs based on your current mood. Select a mood from the mood dropdown menu to get music recommendations that best compliment how you're feeling!</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <main class="relative">
+    <main class="">
         <!--image with mood selector on top use z-index in css to accomplish this-->
-        <div class="hero-container w-3/4 mt-24 mx-auto flex justify-evenly self-center align-center">
+        <div class="hero-container w-3/4 my-24 mx-auto flex justify-evenly self-center align-center">
             <div class="hero-img">
                 <img class="object-cover w-928 h-96 rounded-3xl image" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
             </div>
-            <div class="playlist bg-msblue w-72 h-96 rounded-3xl">
-                <div class="playlist-header text-xl font-fredoka text-mslight text-center">
-                    <p class="mx-auto my-4" id="playlist-name">Select a mood!</p>
+            <div class="playlist bg-msblue w-1/3 h-96 overflow-auto rounded-3xl">
+                <div class="card-header text-xl font-fredoka text-mslight text-center">
+                    <p class="mx-auto my-4" id="playlist-header">Select a mood!</p>
                 </div>
-                <div id="song-recs">
-                    <ul id="song-list" class="font-sawagoth text-sm text-center text-mslight">
+                <div id="song-recs" class="w-4/5 mx-auto">
+                    <ul id="song-list" class="font-sawagoth text-sm text-left text-mslight list-inside">
                         <li class="list-item"></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <!-- select mood-->
-        <div class="">
-            <select class="mood" name="mood">
-                <option value="" disabled selected hidden>Select your mood</option>
-                <option class="options" value="sad">Sad</option>
-                <option class="options" value="angry">Angry</option>
-                <option class="options" value="happy">Happy</option>
-                <option class="options" value="anxious">Anxious</option>
-                <option class="options" value="loving">Loving</option>
-            </select>
+            <div class="absolute inset-y-1/2 inset-x-1/2 z-20">
+                <select class="mood w-60 h-11 text-xl rounded-3xl bg-msred font-sawagoth text-mslight text-center" name="mood">
+                    <option value="" disabled selected hidden>Select your mood!</option>
+                    <option class="options" value="sad">Sad</option>
+                    <option class="options" value="angry">Angry</option>
+                    <option class="options" value="happy">Happy</option>
+                    <option class="options" value="anxious">Anxious</option>
+                    <option class="options" value="loving">Loving</option>
+                </select>
+            </div>
         </div>
     </main>
     <footer class="bottom-0 w-screen">
