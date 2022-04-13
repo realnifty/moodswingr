@@ -20,16 +20,16 @@ var getPlaylist = function (playlistId) {
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
-            'X-RapidAPI-Key': 'f7955a52bcmsh7aeefb259dd6fc4p100f96jsnbff71a98476a'
+            'X-RapidAPI-Key': '86673a3a0fmshb2bb63a74b94633p101ce8jsn70748f432c0e'
         }
     };
 
 
     
-    fetch(`https://spotify23.p.rapidapi.com/playlist/?id=${playlistId}`, options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+fetch(`https://spotify23.p.rapidapi.com/playlist/?id=${playlistId}`, options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
 }
 
 var getPlaylistTracks = function() {
@@ -37,21 +37,21 @@ var getPlaylistTracks = function() {
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
-            'X-RapidAPI-Key': 'f7955a52bcmsh7aeefb259dd6fc4p100f96jsnbff71a98476a'
+            'X-RapidAPI-Key': '86673a3a0fmshb2bb63a74b94633p101ce8jsn70748f432c0e'
         }
     };
     
     fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=1v1xk7kQiZUfKrGVRqcNoa&offset=0&limit=10', options)
-        .then(function (response) {
+        .then(function (response){
             response.json()
-            
+            .then(function (response){
+                console.log(response)
+                for (let i = 0; i < response.items.length; i++){
+                    console.log(response.items[i].track.name);
+                }
+            })
         })
-        .then(function(response) {
-            for(var i = 0; i < response[i].length; i++){
-                console.log(response.items[0].name);
-            }
-            console.log(response);
-        })
+        
         .catch(err => console.error(err));
 }
 
