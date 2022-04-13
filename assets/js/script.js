@@ -15,24 +15,7 @@ window.addEventListener(`DOMContentLoaded`, () => {
     });
 });
 
-var getPlaylist = function (playlistId) {
-    var options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Host': 'spotify23.p.rapidapi.com',
-            'X-RapidAPI-Key': '86673a3a0fmshb2bb63a74b94633p101ce8jsn70748f432c0e'
-        }
-    };
-
-
-    
-fetch(`https://spotify23.p.rapidapi.com/playlist/?id=${playlistId}`, options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-}
-
-var getPlaylistTracks = function() {
+var getPlaylistTracks = function(trackId) {
     var options = {
         method: 'GET',
         headers: {
@@ -41,7 +24,7 @@ var getPlaylistTracks = function() {
         }
     };
     
-    fetch('https://spotify23.p.rapidapi.com/playlist_tracks/?id=1v1xk7kQiZUfKrGVRqcNoa&offset=0&limit=10', options)
+    fetch(`https://spotify23.p.rapidapi.com/playlist_tracks/?id=${trackId}&offset=0&limit=10`, options)
         .then(function (response){
             response.json()
             .then(function (response){
@@ -70,23 +53,22 @@ var selectMood = function(event){
     var angryId = `37i9dQZF1DWTvNyxOwkztu`;
 
     if (moodNow === `sad`){
-        getPlaylist(sadId);
+        getPlaylistTracks(sadId);
         console.log(`im sad right now`);
     } else if (moodNow === `angry`) {
-        getPlaylist(angryId);
+        getPlaylistTracks(angryId);
         console.log(`im angry right now`);
     } else if (moodNow === `happy`) {
-        getPlaylist(happyId);
+        getPlaylistTracks(happyId);
         console.log(`im happy right now`);
     } else if (moodNow === `anxious`) {
-        getPlaylist(anxiousId);
+        getPlaylistTracks(anxiousId);
         console.log(`im anxious right now`);
     } else if (moodNow === `loving`) {
-        getPlaylist(lovingId);
+        getPlaylistTracks(lovingId);
         console.log(`im loving right now`);
     }
     
 };
 
 mood.addEventListener('change',selectMood)
-getPlaylistTracks();
