@@ -1,6 +1,7 @@
 // global variables
 var mood = document.querySelector(`.mood`);
 var playlist = document.querySelector(`#playlist-name`);
+var defaultPlaylist = document.querySelector(`.playlist`);
 // modal functionality
 window.addEventListener(`DOMContentLoaded`, () => {
     let aboutBtn = document.querySelector(`#modal-btn`);
@@ -54,7 +55,7 @@ var getPlaylistTracks = function(trackId) {
 // with this, we change the hero image to an image of coffee. the next step is use a query to select a landscape photo from a collection. 
 
 function loadImg() {
-    const url = "https://api.unsplash.com/search/photos?query=coffee&per_page=20&client_id=Ysr7HfLSxmWg5Hnp4gTrMG1aTC8n7lL0tUWohY4dUvM";
+    const url = "https://api.unsplash.com/search/photos/random/collections/1xUCIA1Qwc8?client_id=Ysr7HfLSxmWg5Hnp4gTrMG1aTC8n7lL0tUWohY4dUvM";
     let imageDiv = document.querySelector('.image');
     fetch(url)
         .then(response => {
