@@ -72,7 +72,6 @@ function loadImg(imageId) {
                 console.log(data.urls.regular)                        
         });
     }
-    mood.addEventListener('change', loadImg);
 
 // add functionality to mood dropdown
 var selectMood = function(event){
