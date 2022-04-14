@@ -492,9 +492,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.inset-y-1\/3 {
-  top: 33.333333%;
-  bottom: 33.333333%;
+.inset-1\/2 {
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+}
+
+.inset-y-1\/2 {
+  top: 50%;
+  bottom: 50%;
+}
+
+.inset-x-1\/2 {
+  left: 50%;
+  right: 50%;
+}
+
+.inset-y-2\/3 {
+  top: 66.666667%;
+  bottom: 66.666667%;
+}
+
+.inset-x-96 {
+  left: 24rem;
+  right: 24rem;
+}
+
+.inset-x-2\/3 {
+  left: 66.666667%;
+  right: 66.666667%;
+}
+
+.inset-x-1\/3 {
+  left: 33.333333%;
+  right: 33.333333%;
+}
+
+.inset-x-928 {
+  left: 58rem;
+  right: 58rem;
 }
 
 .inset-x-auto {
@@ -502,20 +539,59 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: auto;
 }
 
-.top-0 {
-  top: 0px;
+.inset-y-1\/3 {
+  top: 33.333333%;
+  bottom: 33.333333%;
+}
+
+.inset-x-1\/4 {
+  left: 25%;
+  right: 25%;
+}
+
+.inset-y-1\/4 {
+  top: 25%;
+  bottom: 25%;
 }
 
 .bottom-0 {
   bottom: 0px;
 }
 
-.z-20 {
-  z-index: 20;
+.top-0 {
+  top: 0px;
+}
+
+.left-96 {
+  left: 24rem;
+}
+
+.left-56 {
+  left: 14rem;
+}
+
+.right-56 {
+  right: 14rem;
+}
+
+.right-48 {
+  right: 12rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.left-928 {
+  left: 58rem;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .m-auto {
@@ -553,9 +629,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 
 .my-4 {
@@ -568,9 +644,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .mt-10 {
@@ -587,6 +668,42 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-11 {
+  margin-left: 2.75rem;
+}
+
+.ml-12 {
+  margin-left: 3rem;
+}
+
+.ml-14 {
+  margin-left: 3.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .flex {
@@ -629,28 +746,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3.5rem;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-12 {
-  height: 3rem;
-}
-
 .h-9 {
   height: 2.25rem;
+}
+
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-6 {
   height: 1.5rem;
 }
 
-.h-8 {
-  height: 2rem;
+.h-56 {
+  height: 14rem;
 }
 
-.h-7 {
-  height: 1.75rem;
+.h-60 {
+  height: 15rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-24 {
@@ -669,6 +790,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.25rem;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
 .w-928 {
   width: 58rem;
 }
@@ -685,36 +810,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 15rem;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .w-14 {
   width: 3.5rem;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
-.w-12 {
-  width: 3rem;
+.w-72 {
+  width: 18rem;
 }
 
 .w-36 {
   width: 9rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
 .w-7 {
   width: 1.75rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .cursor-pointer {
@@ -810,6 +931,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .font-fredoka {
   font-family: Fredoka One, cursive;
 }
@@ -843,19 +968,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-mslight {
@@ -876,6 +996,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.after\:border-none::after {
+  content: var(--tw-content);
+  border-style: none;
 }
 
 .hover\:scale-125:hover {
@@ -909,24 +1034,45 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
   }
-}
 
-@media (min-width: 768px) {
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
+  .sm\:ml-20 {
+    margin-left: 5rem;
+  }
+
+  .sm\:h-16 {
+    height: 4rem;
+  }
+
+  .sm\:h-9 {
+    height: 2.25rem;
+  }
+
+  .sm\:w-16 {
+    width: 4rem;
+  }
+
+  .sm\:w-9 {
+    width: 2.25rem;
+  }
+
+  .sm\:w-4\/5 {
+    width: 80%;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:h-10 {
-    height: 2.5rem;
-  }
-
   .lg\:h-20 {
     height: 5rem;
   }
@@ -942,18 +1088,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:inset-y-1\/2 {
+    top: 50%;
+    bottom: 50%;
+  }
+
+  .\32xl\:inset-x-1\/2 {
+    left: 50%;
+    right: 50%;
+  }
+
+  .\32xl\:inset-x-1\/3 {
+    left: 33.333333%;
+    right: 33.333333%;
+  }
+
   .\32xl\:m-2 {
     margin: 0.5rem;
   }
 
-  .\32xl\:my-8 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .\32xl\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  .\32xl\:m-3 {
+    margin: 0.75rem;
   }
 
   .\32xl\:my-16 {
@@ -961,8 +1116,21 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 4rem;
   }
 
+  .\32xl\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .\32xl\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .\32xl\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .\32xl\:flex {
+    display: flex;
   }
 
   .\32xl\:h-24 {
@@ -973,12 +1141,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 2.75rem;
   }
 
+  .\32xl\:h-96 {
+    height: 24rem;
+  }
+
   .\32xl\:h-14 {
     height: 3.5rem;
   }
 
-  .\32xl\:h-96 {
-    height: 24rem;
+  .\32xl\:h-64 {
+    height: 16rem;
   }
 
   .\32xl\:w-24 {
@@ -989,10 +1161,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 11rem;
   }
 
-  .\32xl\:w-14 {
-    width: 3.5rem;
-  }
-
   .\32xl\:w-928 {
     width: 58rem;
   }
@@ -1001,13 +1169,51 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 33.333333%;
   }
 
-  .\32xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .\32xl\:w-14 {
+    width: 3.5rem;
+  }
+
+  .\32xl\:w-96 {
+    width: 24rem;
+  }
+
+  .\32xl\:w-60 {
+    width: 15rem;
+  }
+
+  .\32xl\:justify-between {
+    justify-content: space-between;
+  }
+
+  .\32xl\:justify-evenly {
+    justify-content: space-evenly;
+  }
+
+  .\32xl\:self-center {
+    align-self: center;
+  }
+
+  .\32xl\:rounded-3xl {
+    border-radius: 1.5rem;
   }
 
   .\32xl\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .\32xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .\32xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
