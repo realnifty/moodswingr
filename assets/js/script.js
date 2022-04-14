@@ -46,9 +46,9 @@ var getPlaylistTracks = function(trackId) {
                     li.classList.add(`removeMe`, `hover:underline`, `p-2`);
                     let anchor= document.createElement(`a`);
                     playlistHeader.innerText = "We recommend these songs!";
-                    anchor.text =response.items[i].track.artists[0].name + " - " + response.items[i].track.name;
+                    anchor.text = response.items[i].track.artists[0].name + " - " + response.items[i].track.name;
                     anchor.style.textDecoration = 'none';
-                    anchor.href = 'https://www.youtube.com/results?search_query=' + response.items[i].track.name;
+                    anchor.href = 'https://www.youtube.com/results?search_query=' + response.items[i].track.artists[0].name + " " + response.items[i].track.name;
                     anchor.setAttribute('target', '_blank');
                     li.appendChild(anchor);
                     ulList.appendChild(li);
@@ -81,10 +81,10 @@ var selectMood = function(event){
     var moodNow = (event.target.value);
 
     //these ids are for the images called when user selects mood
-    var sadImageId = `LUYD2b7MNrg`
-    var happyImageId = `fIEywSUhwFU`
-    var anxiousImageId = `67VUBLD94gY`
-    var lovingImageId = `4E5hIgTbP-c`
+    var sadImageId = `9o-knlSGEVo`
+    var happyImageId = `YSHWpgN7RiI`
+    var anxiousImageId = `eHFkxQuRW2Y`
+    var lovingImageId = `UoqAgTZdF_0`
     var angryImageId = `UbOfi152Z6k`
 
     if (moodNow === `sad`){
