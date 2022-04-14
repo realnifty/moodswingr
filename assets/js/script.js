@@ -62,31 +62,22 @@ var getPlaylistTracks = function(trackId) {
 }
 
 // Unsplash Fetch API 
-// with this, we change the hero image to an image of coffee. the next step is use a query to select a landscape photo from a collection. 
-
-function loadImg() {
-    const url = "https://api.unsplash.com/search/photos/random/collections/1xUCIA1Qwc8?client_id=Ysr7HfLSxmWg5Hnp4gTrMG1aTC8n7lL0tUWohY4dUvM";
-    let imageDiv = document.querySelector('.image');
-    fetch(url)
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            console.log(data)
-            for (let i = 0; i < data.results.length; i++) {
-                imageDiv.src = data.results[0].urls.regular
-                console.log(data.results[0].urls.regular)
-
-                // if (data.results[i].id == `6VhPY27jdps`) {
-                //     let imageElement = document.createElement('img');
-                //     imageElement.src = data.results[i].urls.thumb;
-                //     imageDiv.append(imageElement);
+    function loadImg(imageId) {
+        const url = `https://api.unsplash.com/photos/${imageId}/?client_id=Ysr7HfLSxmWg5Hnp4gTrMG1aTC8n7lL0tUWohY4dUvM`;
+        let imageDiv = document.querySelector('.image');
+        fetch(url)
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data)
                 
-            }
-        });
-    }
-
-    mood.addEventListener('change', loadImg);
+                    imageDiv.src = data.urls.regular
+                    console.log(data.urls.regular)                        
+            });
+        }
+    
+        mood.addEventListener('change', loadImg);
 
 // add functionality to mood dropdown
 var selectMood = function(event){
@@ -97,12 +88,29 @@ var selectMood = function(event){
     var moodNow = (event.target.value);
 
 
-    // //these ids are for the images called when user selects mood
-    // var sadImageId = `LUYD2b7MNrg`
-    // var happyImageId = `fIEywSUhwFU`
-    // var anxiousImageId = `67VUBLD94gY`
-    // var lovingImageId = `4E5hIgTbP-c`
-    // var angryImageId = `UbOfi152Z6k`
+    //these ids are for the images called when user selects mood
+    var sadImageId = `LUYD2b7MNrg`
+    var happyImageId = `fIEywSUhwFU`
+    var anxiousImageId = `67VUBLD94gY`
+    var lovingImageId = `4E5hIgTbP-c`
+    var angryImageId = `UbOfi152Z6k`
+
+    if (moodNow === `sad`){
+        loadImg(sadImageId);
+        console.log(`sad picture`);
+    } else if (moodNow === `angry`) {
+        loadImg(angryImageId);
+        console.log(`angry picture`);
+    } else if (moodNow === `happy`) {
+        loadImg(happyImageId);
+        console.log(`happy picture`);
+    } else if (moodNow === `anxious`) {
+        loadImg(anxiousImageId);
+        console.log(`anxious picture`);
+    } else if (moodNow === `loving`) {
+        loadImg(lovingImageId);
+        console.log(`loving picture`);
+    }
 
     var sadId = `6nxPNnmSE0d5WlplUsa5L3`;
     var happyId = `0RH319xCjeU8VyTSqCF6M4`;
