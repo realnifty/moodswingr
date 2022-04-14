@@ -47,15 +47,29 @@ var getPlaylistTracks = function(trackId) {
                     let anchor= document.createElement(`a`);
                     playlistHeader.innerText = "We recommend these songs!";
                     anchor.text = response.items[i].track.artists[0].name + " - " + response.items[i].track.name;
+                    
+                    
                     anchor.style.textDecoration = 'none';
                     anchor.href = 'https://www.youtube.com/results?search_query=' + response.items[i].track.artists[0].name + " " + response.items[i].track.name;
                     anchor.setAttribute('target', '_blank');
                     li.appendChild(anchor);
                     ulList.appendChild(li);
+
+                    var anchorValue = [];
+                    anchorValue.push(ulList);
+                    console.log(anchorValue);
+                    saveSongs(anchor.text);
+                    console.log(anchor.text);
                 }
             })
         })
     .catch(err => console.error(err));
+}
+
+var saveSongs = function(anchorList) {
+    //var anchorValue = [];
+    //anchorValue.push(anchorList);
+    localStorage.setItem('songs', JSON.stringify(anchorList))
 }
 
 // Unsplash Fetch API 
