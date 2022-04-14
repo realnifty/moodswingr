@@ -33,10 +33,18 @@ var getPlaylistTracks = function(trackId) {
 
                 let ulList = document.querySelector(`#song-list`);
                 let playlistHeader = document.querySelector(`#playlist-header`);
+
+
+
                 // loop that creates a list of track names that user can click on access a youtube search of the song 
+                if(document.querySelectorAll('.removeMe').length) {
+                    document.querySelectorAll(`.removeMe`).forEach((li) => {li.remove()})
+                    };
+                    
                 for (let i = 0; i < response.items.length; i++){
+                    
                     let li = document.createElement(`li`);
-                    li.classList.add(`hover:underline`, `p-2`);
+                    li.classList.add(`removeMe`, `hover:underline`, `p-2`);
                     let anchor= document.createElement(`a`);
                     playlistHeader.innerText = "We recommend these songs!";
                     anchor.text =response.items[i].track.artists[0].name + " - " + response.items[i].track.name;
@@ -45,7 +53,9 @@ var getPlaylistTracks = function(trackId) {
                     anchor.setAttribute('target', '_blank');
                     li.appendChild(anchor);
                     ulList.appendChild(li);
+                    
                 }
+               
             })
         })
         .catch(err => console.error(err));
